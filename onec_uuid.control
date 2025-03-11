@@ -1,0 +1,4 @@
+comment = 'Onec UUID controll extension'
+default_version = '1.0'
+module_pathname = '$libdir/onec_uuid'
+relocatable = false

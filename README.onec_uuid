@@ -1,0 +1,2 @@
+select onec_extract_uuid(decode('80c3251185ce937342066c99c815dde9', 'hex'))
+
