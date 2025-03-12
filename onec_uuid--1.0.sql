@@ -1,6 +1,9 @@
 \echo Use "CREATE EXTENSION onec_uuid" to load this file. \quit
 
-
-CREATE OR REPLACE FUNCTION onec_extract_uuid(bytea)
+CREATE OR REPLACE FUNCTION onec_decode_uuid(bytea)
 RETURNS uuid AS 'MODULE_PATHNAME'
+LANGUAGE C IMMUTABLE;
+
+CREATE OR REPLACE FUNCTION onec_encode_uuid(uuid)
+RETURNS bytea AS 'MODULE_PATHNAME'
 LANGUAGE C IMMUTABLE;

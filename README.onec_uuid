@@ -1,2 +1,10 @@
-select onec_extract_uuid(decode('80c3251185ce937342066c99c815dde9', 'hex'))
+Расшинение для кодирование / декодирования guidов ссылок 1С:Предприятие 8.x
+
+Метод для получения GUIDа по хранимому значению bytea:
+
+select onec_decode_uuid(decode('80c3251185ce937342066c99c815dde9', 'hex'))
+
+Метод для получения кодированной последовательности bytea по значению GUIDа
+
+select encode(onec_encode_uuid('c815dde9-6c99-4206-80c3-251185ce9373'),'hex')
 
